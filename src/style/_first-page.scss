@@ -1,0 +1,58 @@
+.first-page {
+  background-image: url(../assets/img/desktop.jpg);
+  background-size: cover;
+  height: 120vh;
+ box-shadow: inset 0 -20px 20px -5px rgb(255, 255, 255);
+  /* box-sizing: border-box; */
+
+}
+
+
+.img-third-page {
+  height: 127px;
+}
+
+.container-box {
+  transform: translate(0, 350px);
+   padding: 50px 15px 160px;
+   
+
+}
+
+.text-box {
+  position: absolute;
+  left: 15%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.title {
+  font-size: $font-title;
+  color: #333333;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: $font-subtitle;
+  color: #333333;
+}
+
+.custom {
+  position: relative;
+  min-width: 264px;
+  background-image: linear-gradient(to left, $custom-color-1 , $custom-color-2 );
+  background-repeat: no-repeat;
+  padding: 17px 28px;
+  margin-top: 40px;
+  border-radius: 3em;
+  border: 0px;
+  color: white;
+  &:hover {
+    background-image: linear-gradient(to left, $custom-color-2, $custom-color-1);
+  }
+  &:active {
+    top: 2px;
+  }
+}

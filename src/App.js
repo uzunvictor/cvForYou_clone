@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { FirstPage, SecondPage, ThirdPage } from './components/pages';
+import { GoHome, Header } from './components';
+import { useEffect, useState } from 'react';
+import { scrollToTop } from './helpers/scrollToTop';
 
 function App() {
+
+  const [visibleGoHome, setVisibleGoHome] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) { setVisibleGoHome(true) }
+      else { setVisibleGoHome(false) }
+    })
+  }, [])
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {visibleGoHome && <GoHome scrollToTop={scrollToTop} />}
+      <FirstPage />
+      <SecondPage />
+      <ThirdPage />
     </div>
   );
 }

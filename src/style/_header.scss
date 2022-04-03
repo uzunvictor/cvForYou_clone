@@ -1,0 +1,40 @@
+
+#header {
+   position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.692);
+ }
+
+.logo {
+  max-width: 90px;
+}
+
+.header-container {
+  
+  height: 74px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-shadow: 0 1px 13px rgb(0 0 0 / 15%);
+}
+
+.register-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  padding: 24px 16px 28px;
+}
+
+.flag {
+  width:25px;
+  height:25px;
+  border-radius: 50%;
+  margin: 0 10px;
+ 
+}
